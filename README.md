@@ -1,7 +1,7 @@
 # agreement-constitution-mapping
 Maps semantic relationship between agreement provisions and sections of constitutions that succeed the agreements.
 
-To view click [here](https://peacerep.github.io/agreement-constitution-mapping/index.html).
+To view demonstrator site click [here](https://peacerep.github.io/agreement-constitution-mapping/index.html).
 
 The processing pipeline has been updated to use CCP constitutions in XML format.
 
