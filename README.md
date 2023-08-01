@@ -1,2 +1,10 @@
 # agreement-constitution-mapping
-Maps semantic relationship between agreement provisions and constitution sections
+Maps semantic relationship between agreement provisions and sections of constitutions that succeed the agreements.
+
+The processing pipeline has been updated to use CCP constitutions in XML format.
+
+This is a static site demonstrator with the following UX:
+1. Select a country from a list of countries in order to view a list of peace agreements containing provisions that map onto at least one constitution section.
+2. Select an agreement to view a list of provsions that map onto at least one constitution section.
+3. Select a provision to view a list of semantically similary constitution sections.
+4. Click on a section to deep link to the section on https://www.constituteproject.org
