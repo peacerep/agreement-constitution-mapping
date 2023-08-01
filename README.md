@@ -1,5 +1,5 @@
 # agreement-constitution-mapping
-Maps semantic relationship between agreement provisions and sections of constitutions that succeed the agreements.
+Maps semantic relationship between agreement provisions and sections of a constitution that succeeds the agreements.
 
 The processing pipeline has been updated to use CCP constitutions in XML format.
 
