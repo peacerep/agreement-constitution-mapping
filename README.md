@@ -8,3 +8,5 @@ This repo is a [static site demonstrator](https://peacerep.github.io/agreement-c
 2. Select an agreement to view the list of provisions that map onto at least one constitution section.
 3. Select a provision to view the list of semantically similary constitution sections.
 4. Click on a section to deep link to the section on [https://www.constituteproject.org](https://www.constituteproject.org)
+
+Added an analysis of mapping by agreement stage. 
