@@ -3,7 +3,7 @@ Maps semantic relationship between agreement provisions and sections of constitu
 
 The processing pipeline has been updated to use CCP constitutions in XML format.
 
-This is a [static site demonstrator](https://peacerep.github.io/agreement-constitution-mapping/index.html) with the following UX:
+This repo is a [static site demonstrator](https://peacerep.github.io/agreement-constitution-mapping/index.html) with the following UX:
 1. Select a country from the list of countries in order to view the list of peace agreements containing provisions that map onto at least one constitution section.
 2. Select an agreement to view the list of provisions that map onto at least one constitution section.
 3. Select a provision to view the list of semantically similary constitution sections.
