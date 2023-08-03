@@ -92,9 +92,9 @@ function populate_table(wrapper_id, siblings, type) {
 		if (type == 'country') {
 			text = document.createTextNode(sib.name + ' (' + sib.constitution + ')');
 		} else if (type == 'agreement') {
-			text = document.createTextNode(sib.name + ' - ' + formatDate(sib.date));
+			text = document.createTextNode(sib.id + ' - ' + sib.name + ' - ' + formatDate(sib.date));
 		} else if (type == 'provision') {
-			text = document.createTextNode(sib.text);
+			text = document.createTextNode(sib.number + ' - ' + sib.text);
 		} else {
 			// section
 			text = createLinkNode(sib.text,sib.number);
@@ -117,7 +117,7 @@ function formatDate(date) {
 function createLinkNode(text, number) {
 	// Create a deep link into www.constituteproject.org
 	let a = document.createElement('a'); 
-	let link = document.createTextNode(text);
+	let link = document.createTextNode(number + ' - ' + text);
 	a.appendChild(link); 
 	a.title = 'Deep link'; 
 	a.target = '_blank'; 
