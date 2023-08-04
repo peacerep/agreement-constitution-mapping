@@ -9,4 +9,4 @@ This repo is a [static site demonstrator](https://peacerep.github.io/agreement-c
 3. Select a provision to view the list of semantically similary constitution sections.
 4. Click on a section to deep link to the section on [https://www.constituteproject.org](https://www.constituteproject.org)
 
-Analyses of mapping by agreement metadata attributes has been added. 
+Analyses of mapping by agreement metadata attributes have been added. 
