@@ -1,0 +1,79 @@
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Agreement-Constitution Mapping - Stage Analysis</title>
+</head>
+
+<body>
+	<div style="padding-left: 64px;padding-top: 32px;">
+
+		<div>
+			<h3>Various timeline visualisations</h3>
+		</div>
+		<div>
+			<p>
+				The Bosnian Peace Process is used because the Dayton agreement of 1995 is a close fit to the constitution and therefore provides a good benchmark for the methodology.
+				The Bosnia & Herzegovina constitution was enacted in 1995 and updated in 2010. We are using the updated version.
+			</p>
+			<p>
+				There are 164 encoded sections extracted from the constitution, 158 of which are mapped by the provisions of preceding peace agreements.
+			</p>
+		</div>
+		<div>
+			<div>
+					<p>
+					The plot below shows a classic timeline from the earliest agreement to the updated constitution at the right. 
+					The constitution is marked as a green line, the height of which is equal to the 158 mapped sections. Preceding agreements containing provisions that map onto
+					sections are shown in blue. Non-mapping agreements are shown in red. The highest blue line is the Dayton agreement.
+					</p>
+					<p>
+					The height of an agreement's line represents the size of the set of sections mapped by the agreement's provisions. 
+					It's possible that a section is mapped by more than one provision and using set size removes double-counting. However, the analysis of networks of sections and provisions
+					is ongoing as a clustering/topic modelling exercise.
+					</p>
+				</div>
+			<div id="timeline_bars">
+				<img src="./images/timeline_bars.png" class="timelineplot">
+			</div>
+		</div>
+
+		<div>
+			<div>
+				<p>
+				The plot below shows a heatmap representation of a matrix of Boolean values. Each row in the matrix represents one of the 158 mapped sections of the constitution.
+				Each column represents a mapping agreement. Cell values are:
+				<ul>
+					<li>0 coded as black. The section in the row is not mapped by any provisions of the agreement in the column) </li>
+					<li>1 coded as yellow. The section in the row is mapped by at least one provision of the agreement in the column) </li>
+				</ul>
+				The Dayton agreement is the yellow bar at index 42.
+				</p>
+			</div>
+			<div id="timeline_heatmap">
+				<img src="./images/timeline_heatmap.png" class="timelineplot">
+			</div>
+		</div>
+
+
+		<div>
+			<div>
+				<p>
+					The plot below shows the matrix as a set of horizontal lines, one per section. A dot means that the section is mapped by at least one provision of the agreement
+					at the dot's position on the x-axis.
+				</p>
+			</div>
+			<div id="timeline_lines">
+				<img src="./images/timeline_lines.png" class="timelineplot">
+			</div>
+		</div>
+
+	</div>
+	
+	
+</body>
+
+<link rel="stylesheet" type="text/css" href="./css/image.css" />
+
+</html>
