@@ -9,4 +9,8 @@ This repo is a [static site demonstrator](https://peacerep.github.io/agreement-c
 3. Select a provision to view the list of semantically similary constitution sections.
 4. Click on a section to deep link to the section on [https://www.constituteproject.org](https://www.constituteproject.org)
 
-Analyses of mapping by agreement metadata attributes have been added. 
+The following analysis demonstrations have been added:
+1. The relationship between agreement stage and the likelihood that an agreement contains provisions that map onto constitution sections. 
+2. Which peace processes have the most influence on future constitution.
+3. Timeline visualisations.
+4. Clustering and summarisation.
