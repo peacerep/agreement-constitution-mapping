@@ -10,7 +10,7 @@
 	<div style="padding-left: 64px;padding-top: 32px;">
 
 		<div>
-			<h2>Clustering and summarisation</h2>
+			<h2>Clustering, summarisation, and diffusion</h2>
 		</div>
 		<div>
 			<p>
@@ -31,9 +31,52 @@
 						Because some provisions map onto more than one section, and sections may be mapped by more than one provision, larger clusters may form as the provision-section pairs join together.
 						There are 20 of these larger clusters, the remaining 45 clusters are simple provision-section pairs.
 					</p>
-					</div>
+					<p>
+						A degree centrality algorithm is applied to all 65 clusters in order to provide summarisation of the content of clusters.
+						A summary comprises the most salient provision and section of a cluster measured in terms of the number of connections to sections and provisions respectively.
+						Clusters containing a single provision-section pair are limiting cases. 
+					</p>
+			</div>
 			<div id="network">
 				<img src="./images/network.png" class="graphplot">
+			</div>
+		</div>
+
+		<div>
+			<h3>Diffusion</h3>
+		</div>
+		<div>
+			<p>
+				Diffusion tracks summarisation topics across a time series of agreements. The diagrams below are representations of a Boolean valued topic-agreement matrix
+				for a time series of agreements preceding the Sudan constitution of 2019.
+				Summarisation topics are arranged in order of first appearance in the agreement sequence. The matrix provides information about:
+				<ul>
+					<li>Which summarisation topics are mentioned most (row marginals).</li>
+					<li>Which agreements mention the most summarisation topics (column marginals).</li>
+					<li>When a summarisation topic first appears in the agreement sequence.</li>
+					<li>Clustering of summarisation topics.</li>
+				</ul>
+			</p>
+			<p>
+				Agreements are in date order. In the first diagram the cell values are:
+				<ul>
+					<li>0 coded as black. The agreement in the column does not contain the topic in the row. </li>
+					<li>1 coded as yellow. The agreement in the column does contain the topic in the row. </li>
+				</ul>
+				In the second diagram a dot represents a agreement containing a summarisation topic. 
+			</p>
+			<p>
+				Agreement 350 is the first in the series and is the <em>Darfur Peace Agreement</em> of 05/05/2006. The number of summarisation
+				topics may be explained in part by the influence of the preceding Sudan constitution of 2005. The influence of a previous constitution can 
+				be accounted for when determining the influence of an agreement on a future constitution.
+			</p>
+		</div>
+		<div>
+			<div id="diffusion_heatmap">
+				<img src="./images/diffusion_heatmap.png" class="timelineplot">
+			</div>
+			<div id="diffusion_timeline_lines">
+				<img src="./images/diffusion_timelines.png" class="timelineplot">
 			</div>
 		</div>
 
@@ -43,13 +86,9 @@
 		<div>
 			<div>
 				<p>
-					A degree centrality algorithm is applied to all 65 clusters in order to provide summarisation of the content of clusters.
-					The summary comprises the most salient provision and section of a cluster measured in terms of the number of connections to sections and provisions respectively.
-					Clusters containing a single provision-section pair are limiting cases and are displayed in blue. 
-				</p>
-				<p>
-					Below are 65 provision-section pairs, one for each cluster. The first element in a pair is the provision in a cluster that has the most connections to sections.
-					The second element in the pair is the section in the cluster that has the most connections to provisions. In the main, the semantic similarity of the provision and section is clear. 
+					Below are the 65 summarisation topics. 
+					Summarisation topics are listed in order of first appearance in the agreement time series. Note that the provision component of a summarisation topic
+					is not necessarily taken from the agreement in which the topic first appears.
 				</p>
 			</div>
 			<div id="summarisation">
