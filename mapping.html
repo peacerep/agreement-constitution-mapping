@@ -1,0 +1,63 @@
+
+<html>
+	<head>
+		<title>Agreement-Constitution Mapping Demonstrator</title>
+	
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="minimal-ui"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=0"/>
+		<meta name="description" content="Agreements-constitutions semantic mapping demonstrator"/>
+		<link rel="icon" href="/icons/favicon.ico" sizes="32x32">    
+		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"/>
+		<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32"/>
+		<link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16"/>
+		<link rel="manifest" href="/site.webmanifest"/>
+		<meta name="theme-color" content="#ffffff"/>
+		<meta name="msapplication-config" content="none"/>
+		<meta name="theme-color" content="#ffffff"/>
+	</head>
+	
+
+<body onload="populate_table('wrapper_table', get_countries(), 'country')">
+	
+	<div style="padding-top: 0px;">
+		<div id="header_div" class="header">
+			<table style="table-layout:fixed;width:100%;">
+				<tr>
+					<td class="header_item"><a href="./index.html">Introduction</a></td>
+					<td class="header_item_selected"><a href="./mapping.html">Mapping</a></td>
+					<td class="header_item"><a href="./sections.html">Sections List</a></td>
+					<td class="header_item"><a href="./timelines.html">Timelines</a></td>
+					<td class="header_item"><a href="./clusters.html">Clusters</a></td>
+					<td class="header_item"><a href="./stages.html">Agreement Stage</a></td>
+					<td class="header_item"><a href="./processes.html">Peace Process</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+	<div style="padding-left: 64px;padding-top: 0px;">
+		<div id="breadcrumbs_div">
+			<table id="breadcrumbs_table">
+			</table>
+		</div>
+		<p>&nbsp;</p>
+		<div id="type_div">
+			<p id="type">COUNTRY (CONSTITUTION)</p>
+		</div>
+		<div id="wrapper_div">
+			<table id="wrapper_table">
+			</table>
+		</div>
+	</div>
+	
+</body>
+
+<script type="text/javascript" src="./data/agreement_constitution_map.js"></script>
+<script type="text/javascript" src="./js/tree.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/project.css" />
+
+</html>

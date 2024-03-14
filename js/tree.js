@@ -130,6 +130,10 @@ function createLinkNode(text, number) {
 function populate_type(type,element_id) {
 	if (type == 'country') {
 		str = "COUNTRY (CONSTITUTION)"
+	} else if (type == 'provision')  {
+		str = 'AGREEMENT ' + type.toUpperCase() + "S"
+	} else if (type == 'section')  {
+		str = 'CONSTITUTION ' + type.toUpperCase() + "S"
 	} else {
 		str = type.toUpperCase() + "S"
 	}
