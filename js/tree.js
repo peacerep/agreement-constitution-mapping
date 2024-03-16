@@ -1,6 +1,9 @@
 
 // Base URL for constitution section deep link
 const link_prefix = 'https://www.constituteproject.org/constitution/';
+// Base URLs for agreement deep links
+let pdf_link_prefix = 'https://peaceagreements.org/viewmasterdocument/'
+let coding_link_prefix = 'https://peaceagreements.org/view/'
 
 // Global for storing the constitution of the selected country. Required to build deep link URL.
 let constitution = ''
@@ -91,13 +94,25 @@ function populate_table(wrapper_id, siblings, type) {
 		
 		if (type == 'country') {
 			text = document.createTextNode(sib.name + ' (' + sib.constitution + ')');
+			cell.appendChild(text);
 		} else if (type == 'agreement') {
 			text = document.createTextNode(sib.id + ' - ' + sib.name + ' - ' + formatDate(sib.date));
+			cell.appendChild(text);
+			let blank = row.insertCell()
+			blank.appendChild(document.createTextNode('\u2003'))
+			let pdf_link_cell = row.insertCell();
+			pdf_link_cell.appendChild(createAgreementPDFLinkNode(sib.id));
+			blank = row.insertCell() //blank
+			blank.appendChild(document.createTextNode('\u2003'))
+			let coding_link_cell = row.insertCell();
+			coding_link_cell.appendChild(createAgreementCodingLinkNode(sib.id));
 		} else if (type == 'provision') {
 			text = document.createTextNode(sib.number + ' - ' + sib.text);
+			cell.appendChild(text);
 		} else {
 			// section
 			text = createLinkNode(sib.text,sib.number);
+			cell.appendChild(text);
 		}
 		if (type != 'section') {
 			cell.addEventListener('click', function(){select(this.id,this.name,text,wrapper_id);}, false);
@@ -105,7 +120,6 @@ function populate_table(wrapper_id, siblings, type) {
 		} else {
 			cell.style.cursor = "not-allowed";
 		}
-		cell.appendChild(text);
 	}
 }
 
@@ -123,6 +137,32 @@ function createLinkNode(text, number) {
 	a.target = '_blank'; 
 	// Build the URL
 	let url = link_prefix + constitution + encodeURI('#') + 's' + number;
+	a.href = url; 
+	return a
+}
+
+function createAgreementPDFLinkNode(agreement_id) {
+	// Create a deep link into PA-X agreement
+	let a = document.createElement('a'); 
+	let link = document.createTextNode('View PDF');
+	a.appendChild(link); 
+	a.title = 'Deep link to agreement PDF'; 
+	a.target = '_blank'; 
+	// Build the URL
+	let url = pdf_link_prefix + agreement_id;
+	a.href = url; 
+	return a
+}
+
+function createAgreementCodingLinkNode(agreement_id) {
+	// Create a deep link into PA-X agreement
+	let a = document.createElement('a'); 
+	let link = document.createTextNode('View Coding');
+	a.appendChild(link); 
+	a.title = 'Deep link to agreement coding page'; 
+	a.target = '_blank'; 
+	// Build the URL
+	let url = coding_link_prefix + agreement_id;
 	a.href = url; 
 	return a
 }
