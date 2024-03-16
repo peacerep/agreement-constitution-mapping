@@ -111,7 +111,7 @@ function populate_table(wrapper_id, siblings, type) {
 
 function formatDate(date) {
 	// Reformat the integer YYYYMMDD date to DD/MM/YYYY
-	return date.slice(7, 8)  + '/' + date.slice(5, 6) + '/' + date.slice(0, 4)
+	return date.slice(6, 8)  + '/' + date.slice(4, 6) + '/' + date.slice(0, 4)
 }
 
 function createLinkNode(text, number) {
