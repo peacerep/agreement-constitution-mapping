@@ -24,7 +24,7 @@
 	</div>
 
 
-	<div style="padding-left: 64px;padding-top: 32px;">
+	<div style="padding-left: 64px;padding-right:64px;padding-top: 32px;">
 
 		<div>
 			<h2>Timeline Visualisations: Bosnia & Herzegovina</h2>
@@ -35,27 +35,28 @@
 				The Bosnia & Herzegovina constitution was enacted in 1995 and updated in 2010. We are using the updated version.
 			</p>
 			<p>
-				There are 164 sections extracted from the constitution, 158 of which are mapped by preceding peace agreements. A list of these sections
-				can be viewed <a href="./sections.html" target="_blank">here</a>.
+				There are 164 sections in the Bosnia & Herzegovina constitution of 2010. 
+				Of these, 158 are mapped by one or more provisions in preceding peace agreements. A list of these sections
+				can be viewed <a href="./sections.html" target="_blank">here</a> (Sections List).
 			</p>
 		</div>
-		<div style="padding-top: 64px;">
+		<div style="padding-top: 32px;">
 			<div>
 				<h3>Agreement-constitution timeline</h3>
 			</div>
 			<div>
 				<p>
-				The plot below shows a timeline from the earliest agreement on the left to the constitution at the right. 
-				The constitution is marked as a green line, the height of which is equal to the 158 mapped sections (see above). Agreements containing provisions that map onto
-				sections are shown in blue. Non-mapping agreements are shown in red. The highest blue line is the Dayton agreement.
+					The plot below shows a timeline from the earliest agreement on the left to the constitution at the right.
+					Agreements are ordered by date along the x-axis.
+					The number of sections in an agreement that map onto the constitution are on the y-axis.
 				</p>
 				<p>
-					A constitution is always shown as a line at the final day of the year it was enacted or updated. This is because day and month data are not available.
+					Each agreement that maps onto the constitution is represented by a vertical blue line. The height of the line represents the number of sections in the constitution that has mappings from this agreement. 
+					The constitution is marked as a green line at the final day of the year it was enacted or updated (2010). This is because day and month data are not available. The height of the line represents the 158 mapped sections (see above). Non-mapping agreements are marked in red.
+					It is possible that a section is mapped by more than one provision and to avoid double-counting we remove duplicates.
 				</p>
 				<p>
-				The height of an agreement's line represents the size of the set of sections mapped by the agreement's provisions. 
-				It's possible that a section is mapped by more than one provision and using set size removes double-counting.
-				See <a href="./clusters.html" target="_blank">Clusters and Summarisation</a> for an analysis of provision-section clusters.
+					The Bosnian constitution and the Dayton agreement are very similar. Our results reflect this; the highest blue line is the Dayton agreement, i.e., the Dayton agreement is mapped to more constitution sections than any other agreement. This indicates that the constitution is more semantically similar to the Dayton agreement than any other agreement in the Bosnian Peace Process.				
 				</p>
 			</div>
 			<div id="timeline_bars">
@@ -69,12 +70,20 @@
 			</div>
 			<div>
 				<p>
-					<p>
-						The plot below is a visualisation of a binary-valued matrix. Each row in the matrix represents one of the 158 mapped sections of the constitution. Sections
-						are ordered by when they are first mapped by one or more agreement provisions. Each column represents an agreement. Agreements are organised in date order.
-						The plot below shows the matrix as a set of horizontal lines, one per section. A dot means that the section is mapped by at least one provision of the agreement
-						at the dot's position on the x-axis. The plot shows the flow of mapped sections across the time series of agreements.
+					The agreement-constitution data can be analysed using a binary-valued matrix with constitution sections
+				 	in rows and agreements in columns. The binary values reflect whether an agreement maps to a constitution 
+				 	section (value 1) or does not map to a constitution section (value 0).
+					A visualisation of such a matrix is shown in the plot below.			
 				</p>
+				<p>
+					The x-axis shows the section index. Each horizontal line represents a section of the constitution.
+					The order in which the sections are plotted is by the date of the agreement for which the section has
+					mappings. A dot means that the section is mapped by at least one provision from the agreement at the dot's position on the x-axis. 				
+				</p>
+				<p>
+					The plot shows the flow of mapped sections across the time series of agreements.
+				</p>
+				
 			</div>
 			<div id="timeline_lines">
 				<img src="./images/timeline_lines_Bosnia & Herzegovina-Bosnia_Herzegovina_2009.png" class="timelineplot">
